@@ -7,6 +7,20 @@ authors = ["Your Name <you@example.com>"]
 [tool.poetry.dependencies]
 python = ">=3.10.0,<3.11"
 flask = "^2.3.3"
+click = "^8.1.7"
+python-dotenv = "^1.0.0"
+colorama = "^0.4.6"
+importlib-metadata = "^6.8.0"
+asgiref = "^3.7.2"
+credisuretl = "^0.1.48"
+debug = "^0.3.2"
+werkzeug = "^2.3.7"
+watchdog = "^3.0.0"
+blinker = "^1.6.2"
+wrappers = "^0.1.9"
+middleware = "^1.2.3"
+typing-extensions = "^4.8.0"
+cryptography = "^41.0.4"
 
 [tool.pyright]
 # https://github.com/microsoft/pyright/blob/main/docs/configuration.md
