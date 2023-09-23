@@ -10,9 +10,19 @@ jobs1 = [
   },
   {
   'id': 2 ,
-  'role':'DataEngineer',
+  'role':'DataScientist',
   'location':'Pune,india'
     
+  },
+  {
+  'id': 3 ,
+  'role':'DataAnalyst',
+  'location':'NewDelhi,india'
+  },
+  {
+  'id': 4 ,
+  'role':'DataRecriter',
+  'location':'Hyderabad,india'
   }
 ]
 @app.route("/")

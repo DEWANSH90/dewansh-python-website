@@ -10,9 +10,15 @@
     <img   src="https://dewansh-python-website.dewanshmathur.repl.co/static/mainimg.jpg" height="300" width="100%" >
       <p class="text-center">we will learn here and maka a proper dynamic website.Our website provide all the latest openings here</P>
      <h4 class="text-center">CURRENT OPENINGS</h4>
-    <p>
-      {{jobs}}
-    </p>
-    <button style="align:center" type="button" class="btn btn-primary btn-lg">CONTACT US</button>
+    <div class="row text-center">
+      {% for job in jobs %}
+       {% include 'jobitems.html' %}
+      {% endfor %}
+    </div>
+
+    </div>
+    <div class=" text-center">
+    <button type="button" class=" text-center btn btn-primary btn-lg">CONTACT US</button>
+    </div>
   </body>
 </html>
