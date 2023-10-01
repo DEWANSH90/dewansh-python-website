@@ -1,8 +1,11 @@
 <div class="mt-4 col-sm-6 col-md-8">
-         <h5>{{ job['title'] }} </h5>
-            {{ job['location']}}
-            <p>Rs{{ job['salary']}}</p>
+         <h4>{{ job['title'] }} </h4>
+           <b>Location:</b> {{ job['location']}}
+            <h6>{{ job['currency'] }}{{ job['salary']}}</h6>
+          <b>resposibilities : </b>{{ job['responsibilities'] }}<br>
+          <b>requirements : </b>{{ job['requirements'] }} 
 </div>
 
-<div class="col-6 col-md-4"><button class="mt-4  btn btn-primary" type="submit">Apply</button>
+<div class="col-6 col-md-4">
+  <a href=""><button class="mt-4  btn btn-primary" type="submit">Apply</button></a>
 </div>
