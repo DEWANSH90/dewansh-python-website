@@ -1,4 +1,5 @@
-from flask import Flask , render_template
+from flask import Flask , render_template, request, jsonify
+from flask.json import jsonify
 from database import engine
 from sqlalchemy import text
 
@@ -35,6 +36,12 @@ def helloworld():
 def showjob(id):
   job = load_eachjob_from_db(id)
   return render_template('jobdetails.html', jobs=job)
+
+@app.route("/jobs/<id>/apply", methods = ['post'])
+def formdata(id):
+  data = request.form
+  return jsonify(data)
+  
   
 
 if __name__ == "__main__" :

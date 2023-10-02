@@ -6,6 +6,12 @@
 
   </head>
   <body>
+    <nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">DEWANSHJOBS</a>
+  </div>
+</nav>
+
     <h2 class="text-center">JOB DETAILS </h2>
     <img   src="https://dewansh-python-website.dewanshmathur.repl.co/static/mainimg.jpg" height="300" width="100%" >
     
@@ -17,11 +23,18 @@
             <h6>{{ job['currency'] }}{{ job['salary']}}</h6>
           <b>resposibilities : </b>{{ job['responsibilities'] }}<br>
           <b>requirements : </b>{{ job['requirements'] }} 
-</div>
+        </div>
       {% endfor %}
-      
+    </div>
+
+
+
+    <div class="ms-5 mt-2">
+   
+      {% include 'applicationform.html'  %}
      
     </div>
+    
 
     </div>
     <div class=" text-center">

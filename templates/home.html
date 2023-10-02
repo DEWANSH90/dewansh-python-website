@@ -6,12 +6,18 @@
 
   </head>
   <body>
+    <nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">DEWANSHJOBS</a>
+  </div>
+</nav>
+
     <h2 class="text-center">CAREERS WEBSITE </h2>
     <img   src="https://dewansh-python-website.dewanshmathur.repl.co/static/mainimg.jpg" height="300" width="100%" >
       <p class="text-center">we will learn here and maka a proper dynamic website.Our website provide all the latest openings here</P>
      <h4 class="text-center">CURRENT OPENINGS</h4>
     <div class="row text-center">
-      {% for job in jobs %}
+      {% for x in jobs %}
        {% include 'jobitems.html' %}
       {% endfor %}
     </div>
