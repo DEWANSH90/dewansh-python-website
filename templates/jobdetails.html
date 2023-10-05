@@ -12,27 +12,27 @@
   </div>
 </nav>
 
-    <h2 class="text-center">JOB DETAILS </h2>
+    <h2 class="text-center"> JOB DETAILS</h2>
     <img   src="https://dewansh-python-website.dewanshmathur.repl.co/static/mainimg.jpg" height="300" width="100%" >
     
     <div class="row text-center">
-      {% for job in jobs %}
+      
        <div class="mt-4 ">
-         <h4>{{ job['title'] }} </h4>
-           <b>Location:</b> {{ job['location']}}
-            <h6>{{ job['currency'] }}{{ job['salary']}}</h6>
-          <b>resposibilities : </b>{{ job['responsibilities'] }}<br>
-          <b>requirements : </b>{{ job['requirements'] }} 
+         <h3>{{ jobs['id']}}</h3>
+         <h4>{{ jobs['title'] }} </h4>
+           <b>Location:</b> {{ jobs['location']}}
+            <h6>{{ jobs['currency'] }}{{ jobs['salary']}}</h6>
+          <b>resposibilities : </b>{{ jobs['responsibilities'] }}<br>
+          <b>requirements : </b>{{ jobs['requirements'] }} 
         </div>
-      {% endfor %}
+      
     </div>
 
 
 
     <div class="ms-5 mt-2">
    
-      {% include 'applicationform.html'  %}
-     
+     {% include 'applicationform.html' %}
     </div>
     
 

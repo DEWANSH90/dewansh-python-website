@@ -1,4 +1,4 @@
-from flask import Flask , render_template, request, jsonify
+from flask import Flask , render_template, request
 from flask.json import jsonify
 from database import engine
 from sqlalchemy import text
@@ -17,14 +17,12 @@ def load_eachjob_from_db(id):
   with  engine.connect() as conn:
   
     result = conn.execute(text("select * from jobs where id = :val"), {'val':id})
-    rows = []
-    for row in result.all():
-      rows.append(row._mapping)
+    rows = result.all()
       
-    if (len(row)==0):
+    if (len(rows)==0):
       return None
     else:
-     return rows
+     return rows[0]._mapping
 
 
 @app.route("/")
@@ -37,10 +35,12 @@ def showjob(id):
   job = load_eachjob_from_db(id)
   return render_template('jobdetails.html', jobs=job)
 
+
 @app.route("/jobs/<id>/apply", methods = ['post'])
 def formdata(id):
   data = request.form
-  return jsonify(data)
+  
+  return render_template('applicationsubmitted.html', app=data)
   
   
 
